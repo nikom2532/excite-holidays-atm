@@ -9,6 +9,19 @@ public class Atm {
 	}
 	
 	public int deposit(int deposit_money){
+		long note20_count = 0;
+		long note50_count = 0;
+		
+		while(deposit_money < 50){
+			deposit_money -= 50;
+			note50_count++;
+		}
+		while(deposit_money < 0){
+			deposit_money -= 20;
+			note20_count++;
+		}
+		
+		
 		return 0;
 	}
 	

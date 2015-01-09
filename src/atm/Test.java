@@ -45,7 +45,14 @@ public class Test {
 			int withdraw_money = sc.nextInt();
 			
 			if(obj.checkMoney(withdraw_money)){
-				obj.deposit(withdraw_money);
+				
+				if(money >= withdraw_money){
+					obj.deposit(withdraw_money);
+				}
+				else{
+					System.out.print("There are only " + money + " Dollar to deposit. Cannot withdraw");
+				}
+				
 			}
 			else{
 				System.out.print("Cannot deposit. There are only 20 Note, and 50 Note");
