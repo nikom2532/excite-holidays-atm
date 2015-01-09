@@ -29,15 +29,15 @@ public class Test {
 		Atm obj = new Atm(money);
 		
 		if(i == 1){
-			System.out.print("How many money do you want to deposit: ");
-			int deposit_money = sc.nextInt();
+			System.out.print("How many $20 Note money do you want to deposit: ");
+			int deposit_20money = sc.nextInt();
 			
-			if(obj.checkMoney(deposit_money)){
-				obj.deposit(deposit_money);
-			}
-			else{
-				System.out.print("Cannot deposit. There are only 20 Note, and 50 Note");
-			}
+			System.out.print("How many $50 Note money do you want to deposit: ");
+			int deposit_50money = sc.nextInt();
+			
+			int deposit_money = (deposit_20money * 20) + (deposit_50money * 50);
+			
+			obj.deposit(deposit_money);
 			
 		}
 		else if(i == 2){

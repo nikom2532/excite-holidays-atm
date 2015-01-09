@@ -8,24 +8,24 @@ public class Atm {
 		this.setMoney(cash);
 	}
 	
-	public int deposit(int deposit_money){
-		long note20_count = 0;
-		long note50_count = 0;
-		
-		while(deposit_money < 50){
-			deposit_money -= 50;
-			note50_count++;
-		}
-		while(deposit_money < 0){
-			deposit_money -= 20;
-			note20_count++;
-		}
-		
-		
-		return 0;
+	public void deposit(int deposit_money){
+		money += deposit_money;
 	}
 	
 	public int withdraw(int withdraw_money){
+		
+		long note20_count = 0;
+		long note50_count = 0;
+		
+		while(withdraw_money < 50){
+			withdraw_money -= 50;
+			note50_count++;
+		}
+		while(withdraw_money < 0){
+			withdraw_money -= 20;
+			note20_count++;
+		}
+		
 		return 0;
 	}
 	
