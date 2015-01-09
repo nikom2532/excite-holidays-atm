@@ -49,10 +49,10 @@ public class Test {
 				
 				if(money >= withdraw_money){
 					int a[] = obj.withdraw(withdraw_money);
-					System.out.print("\n\nYou get Note 20$ for " + a[0] + " note");
-					System.out.print("You get Note 50$ for " + a[1] + " note\n");
+					System.out.println("\n\nYou get Note 20$ for " + a[0] + " note");
+					System.out.println("You get Note 50$ for " + a[1] + " note\n");
 					
-					System.out.print("Now you have $" + obj.getMoney());
+					System.out.println("Now you have $" + obj.getMoney());
 				}
 				else{
 					System.out.print("There are only " + money + " Dollar to deposit. Cannot withdraw");

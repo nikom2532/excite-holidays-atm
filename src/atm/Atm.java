@@ -17,11 +17,11 @@ public class Atm {
 		int note20_count = 0;
 		int note50_count = 0;
 		
-		while(withdraw_money < 50){
+		while(withdraw_money >= 50){
 			withdraw_money -= 50;
 			note50_count++;
 		}
-		while(withdraw_money < 0){
+		while(withdraw_money > 0){
 			withdraw_money -= 20;
 			note20_count++;
 		}
