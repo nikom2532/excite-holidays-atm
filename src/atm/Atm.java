@@ -12,10 +12,10 @@ public class Atm {
 		money += deposit_money;
 	}
 	
-	public int withdraw(int withdraw_money){
+	public int[] withdraw(int withdraw_money){
 		
-		long note20_count = 0;
-		long note50_count = 0;
+		int note20_count = 0;
+		int note50_count = 0;
 		
 		while(withdraw_money < 50){
 			withdraw_money -= 50;
@@ -26,7 +26,13 @@ public class Atm {
 			note20_count++;
 		}
 		
-		return 0;
+		money -= withdraw_money;
+		
+		int note[] = new int[2];
+		note[0] = note20_count;
+		note[1] = note50_count;
+		
+		return note;
 	}
 	
 	

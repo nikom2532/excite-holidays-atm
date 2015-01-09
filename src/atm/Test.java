@@ -39,6 +39,7 @@ public class Test {
 			
 			obj.deposit(deposit_money);
 			
+			System.out.print("Now you have $" + obj.getMoney());
 		}
 		else if(i == 2){
 			System.out.print("How many money do you want to withdraw: ");
@@ -47,7 +48,11 @@ public class Test {
 			if(obj.checkMoney(withdraw_money)){
 				
 				if(money >= withdraw_money){
-					obj.deposit(withdraw_money);
+					int a[] = obj.withdraw(withdraw_money);
+					System.out.print("\n\nYou get Note 20$ for " + a[0] + " note");
+					System.out.print("You get Note 50$ for " + a[1] + " note\n");
+					
+					System.out.print("Now you have $" + obj.getMoney());
 				}
 				else{
 					System.out.print("There are only " + money + " Dollar to deposit. Cannot withdraw");
@@ -57,6 +62,9 @@ public class Test {
 			else{
 				System.out.print("Cannot deposit. There are only 20 Note, and 50 Note");
 			}
+		}
+		else if(i == 2){
+			System.out.println("Thank you for using our ATM. Good Bye.");
 		}
 		else{
 			System.out.println("You choose incorrect choice\nExit.");
